@@ -78,7 +78,7 @@ class Desafio1:
         mask = self.get_duckie_mask(obs)
 
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        rectangle = None
+        rectangle = obs
         emergency_break = False
         for contour in contours:
             x, y, w, h = cv2.boundingRect(contour)
